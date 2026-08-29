@@ -1,6 +1,6 @@
 # Twitch Timeout Bot
 
-Automatyczny bot do Twitcha, który nadaje **10-minutowego timeouta** użytkownikowi wskazanemu w realizacji nagrody Channel Points.
+Automatyczny bot do Twitcha, który nadaje **timeouta** użytkownikowi wskazanemu w realizacji nagrody Channel Points.
 
 ## Funkcje
 
