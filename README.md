@@ -393,20 +393,6 @@ Sprawdź logi Workera i odpowiedź Twitch API.
 
 Konto używane przez bota musi mieć odpowiednie uprawnienia do wykonania operacji moderacyjnej.
 
-## 19. Publikowanie na GitHubie
-
-Przed publikacją upewnij się, że repozytorium **nie zawiera**:
-
-- `TWITCH_CLIENT_SECRET`
-- `TWITCH_WEBHOOK_SECRET`
-- `access_token`
-- `refresh_token`
-- `.env`
-- `.dev.vars`
-- prawdziwych danych uwierzytelniających
-
-Sekrety powinny być przechowywane po stronie Cloudflare, a nie w kodzie źródłowym. Cloudflare udostępnia sekrety Workerowi jako bezpieczne bindingi.
-
 ## Schemat działania
 
 ```
