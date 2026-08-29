@@ -14,7 +14,7 @@ Automatyczny bot do Twitcha, który nadaje **10-minutowego timeouta** użytkowni
 - Obsługa OAuth Twitch
 - Cloudflare Workers + KV
 
-# Twitch Timeout Bot — konfiguracja
+# Konfiguracja
 
 Bot automatycznie nadaje timeout użytkownikowi wskazanemu podczas realizacji wybranej nagrody Channel Points.
 
