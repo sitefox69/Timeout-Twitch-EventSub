@@ -416,12 +416,3 @@ Timeout
         ↓
 FULFILLED
 ```
-
-## Technologie
-
-- Twitch API
-- Twitch OAuth
-- Twitch EventSub
-- Cloudflare Workers
-- Cloudflare KV
-- JavaScript
