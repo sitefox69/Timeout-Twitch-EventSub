@@ -14,6 +14,29 @@ Automatyczny bot do Twitcha, który nadaje **timeouta** użytkownikowi wskazanem
 - Obsługa OAuth Twitch
 - Cloudflare Workers + KV
 
+## Schemat działania
+
+```
+Twitch Channel Points
+        ↓
+Twitch EventSub
+        ↓
+Cloudflare Worker /webhook
+        ↓
+Weryfikacja podpisu EventSub
+        ↓
+Sprawdzenie REWARD_ID
+        ↓
+Pobranie user_input
+        ↓
+Wyszukanie użytkownika
+        ↓
+Sprawdzenie użytkownika
+        ↓
+Timeout
+        ↓
+FULFILLED
+```
 # Konfiguracja
 
 Bot automatycznie nadaje timeout użytkownikowi wskazanemu podczas realizacji wybranej nagrody Channel Points.
@@ -392,27 +415,3 @@ Sprawdź:
 Sprawdź logi Workera i odpowiedź Twitch API.
 
 Konto używane przez bota musi mieć odpowiednie uprawnienia do wykonania operacji moderacyjnej.
-
-## Schemat działania
-
-```
-Twitch Channel Points
-        ↓
-Twitch EventSub
-        ↓
-Cloudflare Worker /webhook
-        ↓
-Weryfikacja podpisu EventSub
-        ↓
-Sprawdzenie REWARD_ID
-        ↓
-Pobranie user_input
-        ↓
-Wyszukanie użytkownika
-        ↓
-Sprawdzenie użytkownika
-        ↓
-Timeout
-        ↓
-FULFILLED
-```
