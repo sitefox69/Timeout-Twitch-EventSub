@@ -182,16 +182,14 @@ Każda własna nagroda Channel Points na Twitchu posiada unikalne ID (`REWARD_ID
 3. Przejdź do zakładki **Network / Sieć**.
 
 4. W polu filtrowania wpisz:  
-
-    `gql`
-
+   ```
+   gql
+   ```
 6. Na swoim kanale otwórz menu **Channel Points**.
 
 7. W zakładce Network pojawią się żądania Twitcha związane z Channel Points. Otwórz żądanie dotyczące nagród.
 
-8. Przejdź do zakładki **Response / Odpowiedź** i wyszukaj nazwę swojej nagrody, np.:  
-
-    `Timeout`
+8. Przejdź do zakładki **Response / Odpowiedź** i wyszukaj nazwę swojej nagrody np:`Timeout`
 
 9. Przy danych nagrody znajdziesz pole `id`, np.:  
    ```json
