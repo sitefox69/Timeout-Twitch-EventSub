@@ -170,23 +170,52 @@ Twitch przekazuje ten tekst do EventSub jako `user_input`.
 
 ## 6. Pobranie REWARD_ID
 
-Każda własna nagroda Channel Points ma własne ID.
+Każda własna nagroda Channel Points na Twitchu posiada unikalne ID (`REWARD_ID`).
 
-W kodzie znajdź:
+### Aby znaleźć ID swojej nagrody:
+
+1. Otwórz swój kanał Twitch w przeglądarce.
+
+2. Otwórz narzędzia deweloperskie przeglądarki:  
+   **F12**
+
+3. Przejdź do zakładki **Network / Sieć**.
+
+4. W polu filtrowania wpisz:  
+
+    `gql`
+
+6. Na swoim kanale otwórz menu **Channel Points**.
+
+7. W zakładce Network pojawią się żądania Twitcha związane z Channel Points. Otwórz żądanie dotyczące nagród.
+
+8. Przejdź do zakładki **Response / Odpowiedź** i wyszukaj nazwę swojej nagrody, np.:  
+
+    `Timeout`
+
+9. Przy danych nagrody znajdziesz pole `id`, np.:  
+   ```json
+   "id": "92af127c-7326-4483-a52b-b0da0be61c01"
+   ```
+
+10. Skopiuj samą wartość ID:  
+   `92af127c-7326-4483-a52b-b0da0be61c01`
+
+Następnie w kodzie Workera znajdź:
 
 ```js
 const REWARD_ID = "YOUR_REWARD_ID";
 ```
 
-Wpisz tam ID swojej nagrody.
-
-Przykład:
+i zastąp `YOUR_REWARD_ID` skopiowanym ID swojej nagrody:
 
 ```js
-const REWARD_ID = "12345678-abcd-1234-abcd-123456789abc";
+const REWARD_ID = "92af127c-7326-4483-a52b-b0da0be61c01";
 ```
 
-> ID nagrody **nie jest sekretem**.
+Po zmianie wykonaj ponownie **Deploy Workera**.
+
+> **Uwaga:** Każda nagroda Channel Points posiada inne ID. Upewnij się, że kopiujesz ID dokładnie tej nagrody, która ma uruchamiać timeout.
 
 ## 7. Ustawienie czasu timeouta
 
