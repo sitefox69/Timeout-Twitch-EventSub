@@ -54,7 +54,25 @@ Przed rozpoczęciem potrzebujesz:
 - Cloudflare KV Namespace
 - własnej nagrody Channel Points
 
-## 1. Utworzenie aplikacji Twitch
+## 1. Utworzenie Cloudflare Worker
+
+Wejdź na: [https://dash.cloudflare.com/](https://dash.cloudflare.com/)
+
+Przejdź do: **Workers & Pages → Create → Worker**
+
+Utwórz nowego Workera.
+
+Wklej kod bota do Workera i wykonaj **Deploy**.
+
+Po wdrożeniu otrzymasz adres podobny do:
+
+```
+https://nazwa-workera.nazwa-uzytkownika.workers.dev
+```
+
+Ten adres będzie potrzebny w dalszej konfiguracji.
+
+ ## 2. Utworzenie aplikacji Twitch
 
 Wejdź na: [https://dev.twitch.tv/console/apps](https://dev.twitch.tv/console/apps)
 
@@ -77,23 +95,6 @@ Zapisz:
 
 > **Uwaga:** Client Secret traktuj jako hasło i nigdy nie publikuj go w repozytorium.
 
-## 2. Utworzenie Cloudflare Worker
-
-Wejdź na: [https://dash.cloudflare.com/](https://dash.cloudflare.com/)
-
-Przejdź do: **Workers & Pages → Create → Worker**
-
-Utwórz nowego Workera.
-
-Wklej kod bota do Workera i wykonaj **Deploy**.
-
-Po wdrożeniu otrzymasz adres podobny do:
-
-```
-https://nazwa-workera.nazwa-uzytkownika.workers.dev
-```
-
-Ten adres będzie potrzebny w dalszej konfiguracji.
 
 ## 3. Utworzenie Cloudflare KV
 
@@ -186,14 +187,6 @@ const REWARD_ID = "12345678-abcd-1234-abcd-123456789abc";
 ```
 
 > ID nagrody **nie jest sekretem**.
-
-Jeżeli publikujesz projekt jako uniwersalne repozytorium, pozostaw:
-
-```js
-YOUR_REWARD_ID
-```
-
-i pozwól użytkownikowi ustawić własne ID.
 
 ## 7. Ustawienie czasu timeouta
 
